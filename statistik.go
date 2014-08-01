@@ -2,7 +2,7 @@ package statistik
 
 import (
 	//"fmt"
-	//"math"
+	"math"
 	"sort"
 )
 
@@ -38,6 +38,7 @@ func Median(himpunan []int) (median float64) {
 	return median
 }
 
+// Modus dari himpunan int
 func Modus(Himpunan []int) (modus float64) {
 	if len(Himpunan) == 0 {
 		return 0.0
@@ -52,4 +53,19 @@ func Modus(Himpunan []int) (modus float64) {
 		}
 	}
 	return float64(batasbawah)
+}
+
+// Simpangan baku dari Himpunan N
+
+func Standardeviasi(Himpunan []int) (standardeviasi float64) {
+	if len(Himpunan) == 0 {
+		return 0.0
+	}
+	m := Rerata(Himpunan)
+	for _, n := range Himpunan {
+		standardeviasi += (float64(n) - m) * (float64(n) - m)
+	}
+	standardeviasi = math.Pow(standardeviasi/float64(len(Himpunan)), 0.5)
+	return standardeviasi
+
 }
