@@ -3,6 +3,7 @@ package statistik
 import (
 	"fmt"
 	//"math"
+	//"os"
 )
 
 // rata-rata dari himpunan integer cth: 1,3,4,6,2,3,4
@@ -13,5 +14,5 @@ func Rerata(himpunan []int) (rerata float64) {
 	for _, v := range himpunan {
 		rerata += float64(v)
 	}
-	return mean / float64(len(himpunan))
+	return rerata / float64(len(himpunan))
 }
