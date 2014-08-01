@@ -2,7 +2,7 @@ package statistik
 
 import (
 	"fmt"
-	"math"
+	//"math"
 )
 
 // rata-rata dari himpunan integer cth: 1,3,4,6,2,3,4
