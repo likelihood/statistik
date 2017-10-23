@@ -1,3 +1,5 @@
+//hanya untuk keperluan belajar
+//bukan untuk keperluan produksi
 package statistik
 
 import (
